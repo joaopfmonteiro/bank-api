@@ -1,0 +1,24 @@
+package com.joao.bankbackapi.business.services;
+
+import com.joao.bankbackapi.business.persistant.SimulationIndependentEntity;
+import com.joao.bankbackapi.business.persistant.repositories.SimulationIndependentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class SimulationIndependentService {
+    @Autowired
+    private SimulationIndependentRepository simulationIndependentRepository;
+    public List<SimulationIndependentEntity> findAllSimulationIndependent(){
+        return simulationIndependentRepository.findAll();
+    }
+    public SimulationIndependentEntity findSimulationIndependentById(Long id){
+        return simulationIndependentRepository.getById(id);
+    }
+    public SimulationIndependentEntity saveSimulationIndependent(SimulationIndependentEntity simutalion){
+        return simulationIndependentRepository.save(simutalion);
+    }
+
+}

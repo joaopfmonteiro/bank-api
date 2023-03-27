@@ -20,8 +20,8 @@ public class SimulationIndependentController {
     public SimulationIndependentEntity getSimulationIndependentById(@PathVariable Long id){
         return simulationIndependentService.findSimulationIndependentById(id);
     }
-//    @PostMapping()
-//    public SimulationIndependentEntity saveSimulationIndependentById(@RequestBody SimulationIndependentEntity simulation){
-//        return simulationIndependentService.saveSimulationIndependent(simulation);
-//    }
+    @PostMapping()
+    public SimulationIndependentEntity saveSimulationIndependent(@RequestBody SimulationIndependentEntity simulation){
+        return simulationIndependentService.saveSimulationIndependent(simulation);
+    }
 }

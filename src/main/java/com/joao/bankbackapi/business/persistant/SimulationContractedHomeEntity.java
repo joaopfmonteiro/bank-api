@@ -1,5 +1,6 @@
 package com.joao.bankbackapi.business.persistant;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Table(name = "simulation_contracted_home")
 
 public class SimulationContractedHomeEntity {

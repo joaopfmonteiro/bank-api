@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/simulation_home_step2")
-public class SimulationHomeController {
+public class SimulationStep2Controller {
     @Autowired
     private SimulationStep2Service simulationHomeStep2Service;
     @GetMapping()

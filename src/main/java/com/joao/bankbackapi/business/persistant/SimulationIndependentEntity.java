@@ -1,5 +1,6 @@
 package com.joao.bankbackapi.business.persistant;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Table(name = "s_independent")
 
 public class SimulationIndependentEntity {
@@ -20,11 +22,11 @@ public class SimulationIndependentEntity {
     @Column(name = "social_number")
     private Long socialNumber;
     @Column(name = "time_as_Independent")
-    private long timeAsIndependent;
+    private Long timeAsIndependent;
     @Column(name = "avarage_monthly_income")
-    private long avarageMonthlyIncome;
+    private Long avarageMonthlyIncome;
     @Column(name = "anual_income")
-    private long anualIncome;
+    private Long anualIncome;
     @Column(name = "line_of_work")
     private String lineOfWork;
     @Column(name = "worker_type")

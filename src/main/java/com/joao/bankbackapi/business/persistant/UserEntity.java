@@ -1,5 +1,6 @@
 package com.joao.bankbackapi.business.persistant;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,12 +14,12 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Table(name = "users")
 
 public class UserEntity {
     @Id
     @GeneratedValue()
-    @Column(name = "user_id")
     private Long id;
     @Column(name = "first_name")
     private String firstName;

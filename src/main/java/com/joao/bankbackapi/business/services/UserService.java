@@ -24,8 +24,8 @@ public class UserService {
     public void deleteUser(Long id){
         userRepository.deleteById(id);
     }
-//    public void updateUser(Long id){
-//        return userRepository.
-//    }
+    public void updateUser(UserEntity user){
+         userRepository.save(user);
+    }
 
 }

@@ -24,6 +24,10 @@ public class SimulationStep2Controller {
     public SimulationStep2Entity saveSimulationHome(@RequestBody SimulationStep2Entity simulation){
         return simulationHomeStep2Service.saveSimulationHomeStep2(simulation);
     }
+    @PutMapping()
+    public void updateSimulation(@RequestBody SimulationStep2Entity simulationStep2Entity){
+        simulationHomeStep2Service.updateSimulation(simulationStep2Entity);
+    }
     @DeleteMapping("{id}")
     public void deleteSimulation(@PathVariable Long id){
         simulationHomeStep2Service.deleteSimulationById(id);

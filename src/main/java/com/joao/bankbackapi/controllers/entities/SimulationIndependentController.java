@@ -1,6 +1,7 @@
 package com.joao.bankbackapi.controllers.entities;
 
 import com.joao.bankbackapi.business.persistant.SimulationIndependentEntity;
+import com.joao.bankbackapi.business.persistant.SimulationStep2Entity;
 import com.joao.bankbackapi.business.services.SimulationIndependentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,8 +25,12 @@ public class SimulationIndependentController {
     public SimulationIndependentEntity saveSimulationIndependent(@RequestBody SimulationIndependentEntity simulation){
         return simulationIndependentService.saveSimulationIndependent(simulation);
     }
+    @PutMapping()
+    public void updateSimulation(@RequestBody SimulationIndependentEntity simulation){
+        simulationIndependentService.updateSimulation(simulation);
+    }
     @DeleteMapping("{id}")
-    public void SimulationIndependentEntity(@PathVariable Long id){
+    public void simulationIndependentEntity(@PathVariable Long id){
         simulationIndependentService.deleteSimulation(id);
     }
 }

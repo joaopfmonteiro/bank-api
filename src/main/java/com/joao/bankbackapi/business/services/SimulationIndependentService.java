@@ -17,8 +17,11 @@ public class SimulationIndependentService {
     public SimulationIndependentEntity findSimulationIndependentById(Long id){
         return simulationIndependentRepository.getById(id);
     }
-    public SimulationIndependentEntity saveSimulationIndependent(SimulationIndependentEntity simutalion){
-        return simulationIndependentRepository.save(simutalion);
+    public SimulationIndependentEntity saveSimulationIndependent(SimulationIndependentEntity simulation){
+        return simulationIndependentRepository.save(simulation);
+    }
+    public void updateSimulation(SimulationIndependentEntity simulation){
+        simulationIndependentRepository.save(simulation);
     }
     public void deleteSimulation(Long id){
         simulationIndependentRepository.deleteById(id);

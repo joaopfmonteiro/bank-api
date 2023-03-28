@@ -20,6 +20,9 @@ public class SimulationStep2Service {
     public SimulationStep2Entity saveSimulationHomeStep2(SimulationStep2Entity simulation){
         return simulationHomeStep2Repository.save(simulation);
     }
+    public void updateSimulation(SimulationStep2Entity simulation) {
+        simulationHomeStep2Repository.save(simulation);
+    }
     public void deleteSimulationById(Long id){
         simulationHomeStep2Repository.deleteById(id);
     }

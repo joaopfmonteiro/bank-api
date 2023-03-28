@@ -20,6 +20,9 @@ public class SimulationContractedHomeService {
     public SimulationContractedHomeEntity saveSimulation(SimulationContractedHomeEntity simulation){
         return simulationContractedHomeRepository.save(simulation);
     }
+    public void updateSimulation(SimulationContractedHomeEntity simulation) {
+        simulationContractedHomeRepository.save(simulation);
+    }
     public void deleteSimulation(Long id){
         simulationContractedHomeRepository.deleteById(id);
     }

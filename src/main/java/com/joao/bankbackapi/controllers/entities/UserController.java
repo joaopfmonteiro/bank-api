@@ -25,10 +25,10 @@ public class UserController {
     public UserEntity saveUser(@RequestBody UserEntity user){
         return userService.saveUser(user);
     }
-//    @PutMapping
-//    public UserEntity updateUser(@RequestBody UserEntity user){
-//        return userService.up
-//    }
+    @PutMapping()
+    public void  updateUser(@RequestBody UserEntity user){
+        userService.updateUser(user);
+    }
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Long id){
         userService.deleteUser(id);

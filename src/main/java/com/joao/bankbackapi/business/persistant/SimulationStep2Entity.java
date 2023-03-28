@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "simulator_home_step2")
-public class SimulationHomeStep2Entity {
+public class SimulationStep2Entity {
     @Id
     private Long id;
     private String amount;

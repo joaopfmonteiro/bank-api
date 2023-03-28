@@ -20,5 +20,8 @@ public class SimulationIndependentService {
     public SimulationIndependentEntity saveSimulationIndependent(SimulationIndependentEntity simutalion){
         return simulationIndependentRepository.save(simutalion);
     }
+    public void deleteSimulation(Long id){
+        simulationIndependentRepository.deleteById(id);
+    }
 
 }

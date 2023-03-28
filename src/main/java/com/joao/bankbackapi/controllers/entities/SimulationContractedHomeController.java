@@ -25,5 +25,9 @@ public class SimulationContractedHomeController {
     public SimulationContractedHomeEntity saveSimulationContractedHome(@RequestBody SimulationContractedHomeEntity simulation){
         return simulationContractedHomeService.saveSimulation(simulation);
     }
+    @DeleteMapping("/{id}")
+    public void deleteSimulation(@PathVariable Long id){
+        simulationContractedHomeService.findSimulationById(id);
+    }
 
 }

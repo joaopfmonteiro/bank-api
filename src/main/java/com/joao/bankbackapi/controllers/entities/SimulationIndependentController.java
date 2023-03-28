@@ -24,4 +24,8 @@ public class SimulationIndependentController {
     public SimulationIndependentEntity saveSimulationIndependent(@RequestBody SimulationIndependentEntity simulation){
         return simulationIndependentService.saveSimulationIndependent(simulation);
     }
+    @DeleteMapping("{id}")
+    public void SimulationIndependentEntity(@PathVariable Long id){
+        simulationIndependentService.deleteSimulation(id);
+    }
 }

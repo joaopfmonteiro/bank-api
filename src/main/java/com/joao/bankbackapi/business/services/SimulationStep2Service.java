@@ -26,5 +26,4 @@ public class SimulationStep2Service {
     public void deleteSimulationById(Long id){
         simulationHomeStep2Repository.deleteById(id);
     }
-
 }

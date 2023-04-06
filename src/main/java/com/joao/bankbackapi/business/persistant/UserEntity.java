@@ -27,11 +27,9 @@ public class UserEntity {
     private String lastName;
     @Column(name = "password")
     private String password;
-    @Column(name = "email")
     private String email;
     @Column(name = "birth_date")
     private Date birthDate;
-    @Column(name = "adreess")
     private String adreess;
 
 }
